@@ -8,9 +8,9 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+  background-color: #3367D6;
+  height: 22px;
+  padding: 10px 0;
   color: white;
 }
 
@@ -20,6 +20,39 @@
 
 .App-intro {
   font-size: large;
+}
+
+.app-no-spacing {
+  padding: 0;
+  margin: 0;
+}
+
+.app-title-tagline {
+  font-style: italic;
+  font-size: 0.6em;
+  opacity: 0.5;
+}
+
+.app-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-title-click {
+  cursor: pointer;
+}
+
+.app-title-click:hover {
+  opacity: 0.5;
+}
+
+.main-content {
+  position: absolute;
+  left: 0;
+  width: 100px;
+  z-index:1;
+  height:100%;
+  background-color: white;
 }
 
 @keyframes App-logo-spin {

@@ -10,11 +10,11 @@ export class MapContainer extends React.Component {
         zoom={14}
       >
         <Marker 
-          // onClick={this.onMarkerClick}
+          onClick={this.onMarkerClick}
           name={'Current location'} 
         />
         <InfoWindow 
-          // onClose={this.onInfoWindowClose}
+          onClose={this.onInfoWindowClose}
         >
           <div>
             <h1>
