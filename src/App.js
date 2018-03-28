@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import GoogleApiWrapper from './MapContainer';
 import HeaderContainer from './HeaderContainer';
+import SideBar from './SideBar';
 import './styles/App.css';
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
         </div> */}
         <div className="App-intro">
           <GoogleApiWrapper />
+          <SideBar />
         </div>
       </div>
     );
