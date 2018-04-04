@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import GoogleApiWrapper from './MapContainer';
 import HeaderContainer from './HeaderContainer';
-import SideBar from './SideBar';
 import './styles/App.css';
+import { Route } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
 
 class App extends Component {
   render() {
@@ -12,10 +13,8 @@ class App extends Component {
         {/* <div className="main-content">
           side
         </div> */}
-        <div className="App-intro">
-          <GoogleApiWrapper />
-          <SideBar />
-        </div>
+        <Route path="/about" component={About} />
+        <Route exact path="/" component={Home} />
       </div>
     );
   }
