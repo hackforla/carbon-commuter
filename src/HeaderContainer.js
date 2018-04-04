@@ -18,8 +18,8 @@ class HeaderContainer extends Component {
             </span>
           </div>
           <div>
-            <span className="app-title-click"><Link to="/">Home</Link></span>
-            <span className="app-title-click"><Link to="/about">About</Link></span>
+            <span className="app-title-click"><Link to="/" className="link">Home</Link></span>
+            <span className="app-title-click"><Link to="/about" className="link" >About</Link></span>
           </div>
           </h1>
         </header> 
