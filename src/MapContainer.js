@@ -3,10 +3,31 @@ import {GoogleApiWrapper, InfoWindow, Map, Marker} from 'google-maps-react';
 import API from './api.json';
  
 export class MapContainer extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      userLat: null,
+      userLon: null,
+    };
+  }
+  componentDidMount() {
+    navigator.geolocation.getCurrentPosition(pos => {
+      console.log('pos >>>', pos.coords);
+      this.setState({
+        userLat: pos.coords.latitude,
+        userLon: pos.coords.longitude
+      });
+    });
+  }
   render() {
+    const { userLat, userLon } = this.state;
     return (
       <Map 
         google={this.props.google} 
+        center={{
+          lat: userLat,
+          lng: userLon
+        }}
         zoom={14}
       >
         <Marker 
