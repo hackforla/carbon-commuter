@@ -1,4 +1,9 @@
-# carbon-commuter
+
+## Carbon Commuter
+
+Carbon Commuter gives you information about the carbon output of your trip.
+
+<bold>Longer form...</bold>
 
 Carbon Commuter is a website
 that provides Los Angeles commuters
