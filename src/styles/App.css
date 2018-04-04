@@ -40,6 +40,14 @@
 
 .app-title-click {
   cursor: pointer;
+  text-decoration: none;
+}
+.link {
+    text-decoration: none;
+    padding: 5px;
+}
+.link:visited {
+    color: white;
 }
 
 .app-title-click:hover {
