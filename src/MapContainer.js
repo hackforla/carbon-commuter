@@ -12,7 +12,6 @@ export class MapContainer extends React.Component {
   }
   componentDidMount() {
     navigator.geolocation.getCurrentPosition(pos => {
-      console.log('pos >>>', pos.coords);
       this.setState({
         userLat: pos.coords.latitude,
         userLon: pos.coords.longitude
@@ -21,18 +20,17 @@ export class MapContainer extends React.Component {
   }
   render() {
     const { userLat, userLon } = this.state;
+    const coords = { lat: userLat, lng: userLon };
     return (
       <Map 
         google={this.props.google} 
-        center={{
-          lat: userLat,
-          lng: userLon
-        }}
+        center={coords}
         zoom={14}
       >
         <Marker 
           onClick={this.onMarkerClick}
           name={'Current location'} 
+          position={coords}
         />
         <InfoWindow 
           onClose={this.onInfoWindowClose}
