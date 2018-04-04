@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import GoogleApiWrapper from './MapContainer';
 import './styles/App.css';
+import { Link } from 'react-router-dom';
 
 class HeaderContainer extends Component {
   render() {
@@ -17,7 +18,7 @@ class HeaderContainer extends Component {
             </span>
           </div>
           <div>
-            <span className="app-title-click">faq</span>
+            <span className="app-title-click"><Link to="/faq">faq</Link></span>
             <span className="app-title-click">&nbsp;about</span>
             <span className="app-title-click">&nbsp;contact</span>
           </div>
